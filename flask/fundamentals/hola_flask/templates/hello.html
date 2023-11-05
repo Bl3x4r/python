@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>My Flask Template</h2>
+    <p>Frase: {{frase}}</p>
+    <p>Numero de veces {{numero_veces}}</p>
+
+    {% for i in range(0,numero_veces) %}
+        <p>{{frase}}</p>
+    {% endfor %}
+
+    {% if frase == 'Hola'%}
+        <p>La frase dice hola</p>
+    {% endif%}
+</body>
+</html>

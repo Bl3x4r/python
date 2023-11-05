@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patio de juegos</title>
+    <style>
+        .cuerpo{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+        }
+        .header{
+            flex: 1;
+        }
+        .contenido{
+            display: flex;
+            justify-content: space-evenly;
+            flex-wrap: wrap;
+            gap: 15px;
+            flex:3
+        }
+        .cajas{
+            width: 200px;
+            height: 200px;
+            border: 2px solid black;
+            border-radius: 15px;
+        }
+    </style>
+</head>
+<body>
+<div class="cuerpo">
+    <div class="header"><h1>Welcome!</h1></div>
+    <div class="contenido">
+        {% for x in range(0, cantidad)%}
+            <div class="cajas" style="background-color: {{color}};"></div>
+        {%endfor%}
+    </div>
+</div>
+
+</body>
+</html>
