@@ -1,0 +1,20 @@
+*{
+    padding: 0;
+    margin: 0;
+    border: 1px solid black;
+}
+.cuerpo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    gap: 15px;
+}
+.contenido{
+    display:flex;
+    flex-wrap: wrap;
+}
+.cajas{
+    width: 50px;
+    height: 50px;
+}
