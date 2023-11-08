@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Tabla de Usuarios</title>
+        <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='/css/style.css')}}">
+    </head>
+<body>
+    <div class="contador">
+        <h1>Contador</h1>
+        <h3>{{session["contador"]}} vez(veces)</h3>
+    </div>
+    <div class="botones">
+        <a href="/agregar_dos" class="btn btn_agregar_dos">Add two visits!</a>
+        <a href="/reiniciar" class="btn btn-reiniciar">Reset</a>
+    </div>
+</body>
+</html>

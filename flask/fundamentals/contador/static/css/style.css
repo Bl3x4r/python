@@ -1,0 +1,27 @@
+*{
+    padding: 0;
+    margin: 0;
+    border: 1px solid black;
+}
+
+.contador{
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+.botones{
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+}
+a{
+    text-decoration: none;
+    background-color: rebeccapurple;
+    color: peachpuff;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 2px 2px black;
+}
