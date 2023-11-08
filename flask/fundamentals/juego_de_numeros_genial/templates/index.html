@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='/css/style.css')}}">
+    <title>Gran Juego De Numeros</title>
+</head>
+<body>
+    <div class="instrucciones">
+        <h1>Bienvenido al Gran Juego de Numeros</h1>
+        <p>Estoy pensando en un numero entre 1 y 100</p>
+        <form action="/adivinar" method="post">
+            <div class="form_1">
+                <label for="adivinar">Trata de adivinar cual es!!</label>
+                <input type="text" name="adivinar" id="adivinar" class="form_adivinar">
+            </div>
+            <div class="btn_adiv">
+                <input type="submit" name="adivinar" id="btn btn_adivinar">
+            </div>
+        </form>
+    </div>
+        {% if 'adiv' in session: %}
+            {% if session['adiv'] == session['num_rand']%}
+                <div class=" trj tarjeta_ganaste">
+                    <h2 class="mens"> Encontraste el numero!!...era {{session["num_rand"]}}</h2>
+                    <a href="/reiniciar" class="btn btn_play_again">Jugar de Nuevo</a>
+                </div>
+            {% elif session['adiv'] < session['num_rand'] %}
+                <div class=" trj tarjeta_muybajo">
+                    <h2 class="mens">Que pena!!, tu numero es demasiado bajo</h2>
+                </div>
+            {% else %}
+            <div class="trj tarjeta_muyalto">
+                <h2 class="mens">Que pena!, tu numero es demasiado alto</h2>
+            </div>
+            {% endif %}
+        {% endif %}
+</html>
