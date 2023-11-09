@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='/css/user.css')}}">
+    <title>Encuesta Dojo</title>
+</head>
+<body>
+    <div class="contenedor">
+        <div class="header">
+            <p class="titulo">Submitted Info</p>
+        </div>
+        <div class="contenido">
+                <ul class="user_info">
+                    <li>Name: {{session['name']}}</li>
+                    <li>Dojo Location: {{session['city']}}</li>
+                    <li>Favorite Languaje: {{session['language']}}</li>
+                    <li class="com">Comment: {{session['com']}}</li>
+                </ul>
+            <div class="btn">
+                <a class="btn_back" href="/">Go Back</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

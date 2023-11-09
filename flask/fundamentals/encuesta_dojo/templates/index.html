@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="Es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encuesta Dojo</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css')}}">
+</head>
+<body>
+    <div class="cuerpo">
+
+        <h2 class="titulo">Encuesta Dojo</h2>
+
+        <form action="/process" method="post">
+            <div class="nombre">
+                <label for="texto">Tu Nombre:</label>
+                <input type="text" name="name" id="texto">
+            </div>
+            <div class="ciudad_dojo">
+                <label for="select"> Localizacion del dojo:</label>
+                <select name='city' id="select">
+                    <option name = "Concepcion"value='concepción'>Concepción</option>
+                    <option value='San Francisco'>San Francisco</option>
+                    <option value='Chicago'>Chicago</option>
+                    <option value='Santiago'>Santiago</option>
+                </select>
+            </div>
+            <div class="favorite_languaje">
+                <label for="lang">Lenguaje Favorito:</label>
+                <select name="language" id="lang">
+                    <option value="py">Python</option>
+                    <option value="js">Javascript</option>
+                    <option value="c">C</option>
+                    <option value="html">Html</option>
+                </select>
+            </div>
+            <div class="comentario">
+                <label class="lbl_com" for="comentario">Comentario(opcional):</label>
+                <textarea name="com" id="comentario" cols="30" rows="10"></textarea>
+            </div>
+            <div class="btn">
+                <input type="submit" name="process" class="btn_submit">
+            </div>
+        </form>
+    </div>
+</body>
+</html>
