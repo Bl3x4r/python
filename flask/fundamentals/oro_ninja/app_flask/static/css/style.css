@@ -1,0 +1,51 @@
+body{
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    padding: 50px;
+}
+
+.nav{
+    display: flex;
+    gap: 10px;
+}
+
+.cant{
+    border: 1px solid black;
+    width: 100px;
+    height: 20px;
+    padding: 0 4px;
+}
+h2{
+    margin: 10px;
+}
+.cont{
+    display: flex ;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.cont-up{
+    display: flex;
+    justify-content: space-around;
+}
+.trj{
+    height: 200px;
+    width: 170px;
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    gap: 20px;
+}
+.actividad{
+    max-height: 200px;
+    border: 2px solid black;
+    overflow: scroll;
+}
+.perdida{
+    color: lightcoral;
+}
+.ganada{
+    color: green;
+}
